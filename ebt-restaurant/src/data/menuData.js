@@ -159,43 +159,43 @@ export const heroImages = [
 
 export const branches = [
   {
-    id: 'madhapur',
-    name: 'Madhapur Branch',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    id: 'maisammaguda',
+    name: 'Maisammaguda Branch',
+    image: 'https://embabuthinnara-3.firebaseapp.com/assests/mai.jpg',
     year: '2020',
-    customers: '2000+',
-    description: 'Aatithi Bhavan\'s first milestone established in 2020, serving the essence of biryani and the flavor of Arabian mandi in Maisammaguda for over 2 years. Every day, 2000+ happy customers visit our branch. Well-trained chefs and staff place their magic to make food delicious and satisfy every customer.',
-    quote: 'Our restaurant adds savor for every second you spend in.',
+    customers: '2k+',
+    description: 'EBT Established its first milestone in 2020, serving the essence of biryani and the flavor of Arabian mandi in maisammaguda for 2 years. Every day for nearly 2k+ happy customers visits our branch. Well-trained chefs and staff place their magic to make food delicious and satisfy the customer.',
+    quote: 'Our restaurant adds savor for every second you spent in.',
     mapLink: '#',
     phone: '+91 84998 87767',
-    timings: '11 AM – 11 PM',
-    address: 'madhapur, Hyderabad, Telangana'
+    timings: '11:00 AM – 11:00 PM',
+    address: 'Maisammaguda, Hyderabad, Telangana'
   },
   {
     id: 'hitechcity',
     name: 'Hi-Tech City Branch',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: 'https://lh5.googleusercontent.com/p/AF1QipOKX0LCSb2fBdA61wxxH_agyQLU3rwRPgQwLooX=w203-h270-k-no',
     year: '2021',
-    customers: '1000+',
-    description: 'Aatithi Bhavan\'s second milestone hits the IT city of Hyderabad. The hi-tech city has a new destination for foodies. Featuring a diverse selection of dishes catering to various tastes, we use only the freshest ingredients and highest quality meats to ensure every bite is delicious and satisfying.',
+    customers: '1k+',
+    description: "EBT's Second milestone hits the IT city of Hyderabad. The hi-tech city has a new destination for foodies. EBT Hi-tec city features a diverse selection of dishes catering to various tastes and dietary needs. Whether you're in the mood for a hearty biryani or protein-loaded Roti & curries, our menu has something for everyone. We use only the freshest ingredients and the highest quality meats and seafood to ensure that every bite is delicious and satisfying. Serving the quality of biryani to 1k+ customers every day.",
     quote: 'We say TASTE is our IDENTITY.',
     mapLink: '#',
     phone: '+91 84998 87767',
-    timings: '11 AM – 11 PM',
-    address: 'Hi-Tech City, Hyderabad, Telangana'
+    timings: '11:00 AM – 11:00 PM',
+    address: 'Hi-Tech City, Madhapur, Hyderabad, Telangana'
   },
   {
-    id: 'gachibowli',
-    name: 'Gachibowli Branch',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
+    id: 'gandimaisamma',
+    name: 'Gandi Maisamma Branch',
+    image: 'https://embabuthinnara-3.firebaseapp.com/assests/g2.jpg',
     year: '2022',
-    customers: '1000+',
-    description: 'Hatrick! Aatithi Bhavan\'s third branch in Gachibowli. Our menu offers a wide range of options, from appetizers to the Arabian mandi. Unique and creative dishes you won\'t find anywhere else. Our chef takes great pride in creating new and exciting flavors that keep you coming back for more.',
+    customers: '1k+',
+    description: "Hatrick established EBT's third branch in Gandimaisamma. Our menu offers a wide range of options, from appetizers to the Arabian mandi. Unique and creative dishes that you won't find anywhere else. Our chef takes great pride in creating new and exciting flavors that will tantalize your taste buds and keep you coming back for more. Every day we serve more than 1k customers in our Every branch.",
     quote: 'Food making is a skill to us.',
     mapLink: '#',
     phone: '+91 84998 87767',
-    timings: '11 AM – 11 PM',
-    address: 'Gachibowli, Hyderabad, Telangana'
+    timings: '11:00 AM – 11:00 PM',
+    address: 'Gandi Maisamma, Hyderabad, Telangana'
   }
 ]
 

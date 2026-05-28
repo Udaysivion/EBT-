@@ -217,7 +217,6 @@ button {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-ember) transparent;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
 }
 
 .h-scroll::-webkit-scrollbar {

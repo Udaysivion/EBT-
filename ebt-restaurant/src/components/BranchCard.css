@@ -4,6 +4,9 @@
   overflow: hidden;
   border: 1px solid var(--clr-border-subtle);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .branch-card:hover {
@@ -82,6 +85,9 @@
 
 .branch-card__body {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .branch-card__meta {
@@ -126,6 +132,7 @@
   padding: 8px 14px;
   background: var(--clr-ember-dim);
   border-radius: 0 8px 8px 0;
+  margin-top: auto;
   margin-bottom: 20px;
 }
 
@@ -174,4 +181,23 @@
 .branch-card__call:hover {
   background: var(--clr-ember-light);
   transform: translateY(-1px);
+}
+
+.branch-card__read-more {
+  background: transparent;
+  border: none;
+  color: var(--clr-gold);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0;
+  margin-left: 6px;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s ease;
+  font-family: var(--font-body);
+}
+
+.branch-card__read-more:hover {
+  color: var(--clr-ember-light);
+  text-decoration: underline;
 }

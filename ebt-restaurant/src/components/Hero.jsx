@@ -70,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             Welcome to<br />
-            <span className="hero__title-brand">Aatithi <br />BHAVAN</span>
+            <span className="hero__title-brand">EM BABU <br />THINNARA</span>
           </motion.h1>
 
           <motion.p

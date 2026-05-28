@@ -14,12 +14,12 @@ export default function Footer() {
             <Link to="/" className="footer__logo">
               <img src="https://em-babu-thinnara.firebaseapp.com/1.png" alt="EBT Logo" />
               <div>
-                <span className="footer__logo-title">Aatithi Bhavan</span>
-                <span className="footer__logo-tagline">Taste is our Identity</span>
+                <span className="footer__logo-title">EM BABU THINNARA</span>
+                <span className="footer__logo-tagline">A Family Restaurant</span>
               </div>
             </Link>
             <p className="footer__about">
-              A beloved family restaurant serving authentic Biryani and Arabian Mandi in Hyderabad since 2020. Where every meal becomes a memory.
+              At EBT, we pride ourselves on offering a unique and memorable dining experience for our customers. Taste is our identity.
             </p>
             <div className="footer__socials">
               <a href="https://wa.me/919494792191" className="footer__social footer__social--whatsapp" aria-label="WhatsApp" target="_blank" rel="noreferrer">
@@ -31,7 +31,7 @@ export default function Footer() {
               <a href="tel:+918499887767" className="footer__social footer__social--phone" aria-label="Call">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
               </a>
-              <a href="mailto:aatithibhavan@gmail.com" className="footer__social footer__social--email" aria-label="Email">
+              <a href="mailto:embabuthinnara@gmail.com" className="footer__social footer__social--email" aria-label="Email">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
               </a>
             </div>
@@ -49,9 +49,9 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">Our Branches</h4>
             <ul className="footer__nav">
-              <li><span>madhapur</span></li>
+              <li><span>Maisammaguda</span></li>
               <li><span>Hi-Tech City</span></li>
-              <li><span>Gachibowli</span></li>
+              <li><span>Gandi Maisamma</span></li>
             </ul>
             <h4 className="footer__col-title" style={{ marginTop: '24px' }}>Hours</h4>
             <p className="footer__hours">Mon – Sun<br />11:00 AM – 11:00 PM</p>
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <p>© {year} Aatithi Bhavan. All rights reserved. | Our Restaurant is heaven to food lovers.</p>
+          <p>© {year} EM BABU THINNARA. All rights reserved. | Our Restaurant is heaven to food lovers.</p>
         </div>
       </div>
     </footer>
