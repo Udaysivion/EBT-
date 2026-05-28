@@ -92,7 +92,7 @@ export default function Branches() {
                 </svg>
                 +91 84998 87767
               </a>
-              <a href="https://wa.me/919999999999" className="btn-outline" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/919494792191" className="btn-outline" target="_blank" rel="noreferrer">
                 WhatsApp Us
               </a>
             </div>

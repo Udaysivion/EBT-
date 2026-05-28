@@ -1,9 +1,19 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import './BranchCard.css'
 
 export default function BranchCard({ branch, index }) {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true })
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  const maxLength = 130
+  const isLongDescription = branch.description.length > maxLength
+  const displayText = isExpanded
+    ? branch.description
+    : isLongDescription
+      ? `${branch.description.slice(0, maxLength)}...`
+      : branch.description
 
   return (
     <motion.div
@@ -42,7 +52,17 @@ export default function BranchCard({ branch, index }) {
           </svg>
           {branch.address}
         </div>
-        <p className="branch-card__desc">{branch.description}</p>
+        <p className="branch-card__desc">
+          {displayText}
+          {isLongDescription && (
+            <button
+              className="branch-card__read-more"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? ' Read Less' : ' Read More'}
+            </button>
+          )}
+        </p>
         <blockquote className="branch-card__quote">
           "{branch.quote}"
         </blockquote>

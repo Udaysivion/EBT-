@@ -78,9 +78,9 @@ export default function Franchise() {
             transition={{ duration: 0.7 }}
           >
             <span className="section-eyebrow">Partner With Us</span>
-            <h1 className="page-hero__title">Own an Aatithi Bhavan<br />Franchise</h1>
+            <h1 className="page-hero__title">Own an EM BABU THINNARA<br />Franchise</h1>
             <p className="page-hero__subtitle">
-              Join us and spread the joy of food with a new branch of Aatithi Bhavan in your city
+              Join us and spread the joy of food with a new branch of EM BABU THINNARA in your city
             </p>
           </motion.div>
         </div>
@@ -101,12 +101,12 @@ export default function Franchise() {
                 alt="EBT Logo"
                 className="franchise-intro__logo"
               />
-              <span className="section-eyebrow">Why Aatithi Bhavan?</span>
+              <span className="section-eyebrow">Why EM BABU THINNARA?</span>
               <h2 className="section-title" style={{ textAlign: 'left' }}>
                 Start Your Food Journey with a Trusted Brand
               </h2>
               <p className="franchise-intro__text">
-                Aatithi Bhavan franchising is an excellent option for those who want to start their own business with a passion for the food sector but lack the experience or resources to build from scratch. One of the most significant advantages is our proven business model and comprehensive support system.
+                EBT franchising is an excellent option for those who want to start their own business with a passion for the food sector but lack the experience or resources to build from scratch. One of the most significant advantages is our proven business model and comprehensive support system.
               </p>
               <p className="franchise-intro__text">
                 Customers are more likely to visit a restaurant they recognize and trust. With EBT's established brand and loyal following across Hyderabad, you can attract and retain customers from day one.
@@ -154,7 +154,7 @@ export default function Franchise() {
           <div className="section-header">
             <span className="section-eyebrow">What You Get</span>
             <h2 className="section-title">Franchise Benefits</h2>
-            <p className="section-subtitle">Everything you need to run a successful Aatithi Bhavan restaurant</p>
+            <p className="section-subtitle">Everything you need to run a successful EM BABU THINNARA restaurant</p>
           </div>
           <div className="benefits-grid">
             {benefits.map((b, i) => (
@@ -207,25 +207,25 @@ export default function Franchise() {
               Get in touch with our franchise team today. We're ready to help you build your dream restaurant.
             </p>
             <div className="franchise-final-cta__contacts">
-              <a href="tel:+919999999999" className="franchise-contact-link">
+              <a href="tel:+919494792191" className="franchise-contact-link">
                 <div className="franchise-contact-link__icon">📞</div>
                 <div>
                   <strong>Call Us</strong>
-                  <span>+919999999999</span>
+                  <span>+91 94947 92191</span>
                 </div>
               </a>
-              <a href="https://wa.me/9999999999" className="franchise-contact-link" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/919494792191" className="franchise-contact-link" target="_blank" rel="noreferrer">
                 <div className="franchise-contact-link__icon">💬</div>
                 <div>
                   <strong>WhatsApp</strong>
-                  <span>+91 99999 99999</span>
+                  <span>+91 94947 92191</span>
                 </div>
               </a>
-              <a href="mailto:aatithibhavan@gmail.com" className="franchise-contact-link">
+              <a href="mailto:embabuthinnara@gmail.com" className="franchise-contact-link">
                 <div className="franchise-contact-link__icon">✉️</div>
                 <div>
                   <strong>Email Us</strong>
-                  <span>aatithi@gmail.com</span>
+                  <span>embabuthinnara@gmail.com</span>
                 </div>
               </a>
             </div>

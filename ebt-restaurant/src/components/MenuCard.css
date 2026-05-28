@@ -7,7 +7,6 @@
   overflow: hidden;
   border: 1px solid var(--clr-border-subtle);
   cursor: pointer;
-  scroll-snap-align: start;
   transition: var(--transition);
 }
 

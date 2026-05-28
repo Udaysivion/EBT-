@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -107,7 +108,26 @@ function AboutSection() {
 
 function FeaturedMenu() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true })
+  const scrollRef = useRef(null)
   const featured = menuCategories.slice(0, 6)
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0
+    }
+    
+    // Counteract CSS scroll-snapping anomalies triggered by Framer Motion entry animations
+    const timeouts = [100, 300, 600, 1000].map(delay =>
+      setTimeout(() => {
+        if (scrollRef.current) {
+          scrollRef.current.scrollLeft = 0
+        }
+      }, delay)
+    )
+
+    return () => timeouts.forEach(clearTimeout)
+  }, [inView])
+
   return (
     <section className="section" ref={ref}>
       <div className="container">
@@ -124,7 +144,7 @@ function FeaturedMenu() {
           </p>
         </motion.div>
       </div>
-      <div className="h-scroll">
+      <div className="h-scroll" ref={scrollRef}>
         {featured.map((cat, i) => (
           <motion.div
             key={cat.id}

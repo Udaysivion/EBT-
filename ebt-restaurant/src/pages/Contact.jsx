@@ -33,9 +33,9 @@ const contacts = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'embabu@gmail.com',
+    value: 'embabuthinnara@gmail.com',
     sub: 'For franchise & partnerships',
-    href: 'mailto:embabu@gmail.com',
+    href: 'mailto:embabuthinnara@gmail.com',
     color: '#4a90e2',
     bg: 'rgba(74,144,226,0.1)',
   },
