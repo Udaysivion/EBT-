@@ -1,6 +1,6 @@
 import { menuCategories, branches, stats } from '../data/menuData'
 
-const BASE_URL = '/api'
+const BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
 async function safeFetch(endpoint, fallbackData) {
   try {

@@ -3,7 +3,7 @@ import logo from '../assets/logo.jpg'
 import './Admin.css'
 
 // ─── API helpers ────────────────────────────────────────────────────────────
-const BASE = '/api'
+const BASE = import.meta.env.VITE_API_URL || '/api'
 
 function getToken() { return localStorage.getItem('ebt_admin_token') }
 function authHeaders() { return { 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` } }
