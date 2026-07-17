@@ -127,10 +127,15 @@ export default function Franchise() {
     founderBio: "Since 2020, Usha Mandra has been the driving force behind EM BABU THINNARA — transforming Hyderabad's food landscape with authentic home-style biryani and Arabian mandi.",
     franchiseFee: "₹ 5 Lakhs",
     totalSetupCost: "₹ 20–35 Lakhs",
+    liquidFunds: "₹ 10–15 Lakhs",
     royaltyFee: "5% of Revenue",
     agreementTerm: "5 Years",
     breakEven: "8–14 Months",
     minArea: "1000–2500 sq.ft",
+    preferredLocation: "High footfall commercial area, ground floor, main road facing",
+    parkingRequirement: "Dedicated two-wheeler and four-wheeler parking space",
+    staffRequired: "8–12 members",
+    utilityRequirement: "Three-phase power, continuous water supply, exhaust chimney",
     contactPhone: "+91 94947 92191",
     contactEmail: "embabuthinnara@gmail.com",
     contactWhatsapp: "919494792191"
@@ -145,10 +150,15 @@ export default function Franchise() {
   const financials = [
     { label: 'Franchise Fee', value: franchiseData.franchiseFee, note: 'One-time onboarding fee', icon: '🏷️' },
     { label: 'Total Setup Cost', value: franchiseData.totalSetupCost, note: 'Varies by location & size', icon: '🏗️' },
+    { label: 'Liquid Capital', value: franchiseData.liquidFunds, note: 'Required working capital', icon: '💰' },
     { label: 'Royalty Fee', value: franchiseData.royaltyFee, note: 'Monthly, on gross sales', icon: '📊' },
     { label: 'Agreement Term', value: franchiseData.agreementTerm, note: 'Renewable on mutual terms', icon: '📅' },
     { label: 'Break-even Period', value: franchiseData.breakEven, note: 'Typical ROI timeline', icon: '📈' },
     { label: 'Min. Area Required', value: franchiseData.minArea, note: 'Dine-in + kitchen space', icon: '📐' },
+    { label: 'Preferred Location', value: franchiseData.preferredLocation, note: 'High footfall placement', icon: '📍' },
+    { label: 'Parking Requirement', value: franchiseData.parkingRequirement, note: 'Customer parking space', icon: '🚗' },
+    { label: 'Staff Required', value: franchiseData.staffRequired, note: 'Operational kitchen team', icon: '👨‍🍳' },
+    { label: 'Utility Requirement', value: franchiseData.utilityRequirement, note: 'Power & water resources', icon: '⚡' },
   ]
 
   return (

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import logo from '../assets/logo.jpg'
 import './Navbar.css'
 
 const navLinks = [
@@ -36,14 +37,14 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
           <img 
-            src="https://em-babu-thinnara.firebaseapp.com/1.png" 
+            src={logo} 
             alt="EBT Logo" 
             className="navbar__logo-img"
             loading="eager"
           />
           <div className="navbar__logo-text">
-            <span className="navbar__logo-title">EM BABU </span>
-            <span className="navbar__logo-sub">THINNARA</span>
+            <span className="navbar__logo-title">EM BABU</span>
+            <span className="navbar__logo-title">THINNARA</span>
           </div>
         </Link>
 

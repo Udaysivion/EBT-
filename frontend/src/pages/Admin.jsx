@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import logo from '../assets/logo.jpg'
 import './Admin.css'
 
 // ─── API helpers ────────────────────────────────────────────────────────────
@@ -48,7 +49,7 @@ function Modal({ title, onClose, children }) {
 // ─── Field ──────────────────────────────────────────────────────────────────
 function Field({ label, value, onChange, type = 'text', textarea = false }) {
   return (
-    <div className="form-field">
+    <div className={`form-field ${textarea ? 'form-field--full' : ''}`}>
       <label>{label}</label>
       {textarea
         ? <textarea value={value || ''} onChange={e => onChange(e.target.value)} rows={3} />
@@ -92,7 +93,7 @@ function LoginScreen({ onLogin }) {
       </div>
       <div className="login-card">
         <div className="login-card__logo">
-          <img src="https://em-babu-thinnara.firebaseapp.com/1.png" alt="EBT" />
+          <img src={logo} alt="EBT" />
         </div>
         <div className="login-card__brand">
           <span className="login-card__brand-name">EM BABU THINNARA</span>
@@ -150,7 +151,7 @@ function Sidebar({ active, onNav, onLogout }) {
   return (
     <aside className="sidebar">
       <div className="sidebar__top">
-        <img src="https://em-babu-thinnara.firebaseapp.com/1.png" alt="EBT" className="sidebar__logo" />
+        <img src={logo} alt="EBT" className="sidebar__logo" />
         <div className="sidebar__brand">
           <span className="sidebar__brand-name">EBT Admin</span>
           <span className="sidebar__brand-sub">Control Panel</span>
@@ -1047,6 +1048,17 @@ function FranchiseSection({ showToast }) {
   }, [])
   useEffect(() => { load() }, [load])
 
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setForm(prev => ({ ...prev, founderPhoto: reader.result }))
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+
   const save = async () => {
     await api.put('/admin/franchise', form)
     showToast('Franchise data saved!', 'success'); setEditing(false); load()
@@ -1054,23 +1066,67 @@ function FranchiseSection({ showToast }) {
 
   if (!data) return <div className="loading">Loading…</div>
 
-  const f = v => (
-    <Field label={v.label} value={form[v.key]} onChange={val => setForm({ ...form, [v.key]: val })} textarea={v.textarea} />
-  )
+  const f = v => {
+    if (v.key === 'founderPhoto') {
+      return (
+        <div key={v.key} className="form-field form-field--full image-uploader-field">
+          <label>{v.label}</label>
+          <div className="image-uploader-preview-row">
+            <img 
+              src={form[v.key] || 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80'} 
+              alt="Founder Preview" 
+              className="uploader-preview-img" 
+            />
+            <div className="uploader-actions">
+              <input 
+                type="file" 
+                accept="image/*" 
+                id="founder-photo-file" 
+                style={{ display: 'none' }} 
+                onChange={handlePhotoUpload}
+              />
+              <button 
+                type="button" 
+                className="btn-upload-file" 
+                onClick={() => document.getElementById('founder-photo-file').click()}
+              >
+                📁 Choose Local Image
+              </button>
+              <input 
+                type="text" 
+                placeholder="Or paste an image URL here..." 
+                value={form[v.key] || ''} 
+                onChange={e => setForm({ ...form, [v.key]: e.target.value })} 
+                className="uploader-url-input"
+              />
+            </div>
+          </div>
+        </div>
+      )
+    }
+    return (
+      <Field key={v.key} label={v.label} value={form[v.key]} onChange={val => setForm({ ...form, [v.key]: val })} textarea={v.textarea} />
+    )
+  }
 
   const fields = [
     { key: 'founderName', label: 'Founder Name' },
     { key: 'founderRole', label: 'Founder Role' },
-    { key: 'founderPhoto', label: 'Founder Photo URL' },
+    { key: 'founderPhoto', label: 'Founder Photo' },
     { key: 'foundedYear', label: 'Founded Year' },
     { key: 'founderBio', label: 'Founder Bio', textarea: true },
     { key: 'founderQuote', label: 'Founder Quote', textarea: true },
     { key: 'franchiseFee', label: 'Franchise Fee' },
     { key: 'totalSetupCost', label: 'Total Setup Cost' },
+    { key: 'liquidFunds', label: 'Liquid Working Capital' },
     { key: 'royaltyFee', label: 'Royalty Fee' },
     { key: 'agreementTerm', label: 'Agreement Term' },
     { key: 'breakEven', label: 'Break-even Period' },
     { key: 'minArea', label: 'Min. Area Required' },
+    { key: 'preferredLocation', label: 'Preferred Location Type', textarea: true },
+    { key: 'parkingRequirement', label: 'Parking Requirement', textarea: true },
+    { key: 'staffRequired', label: 'Staff Required' },
+    { key: 'utilityRequirement', label: 'Utility Requirement (Power/Water)', textarea: true },
     { key: 'contactPhone', label: 'Contact Phone' },
     { key: 'contactEmail', label: 'Contact Email' },
     { key: 'contactWhatsapp', label: 'WhatsApp Number' },
@@ -1099,10 +1155,15 @@ function FranchiseSection({ showToast }) {
             {[
               { label: 'Franchise Fee', value: data.franchiseFee },
               { label: 'Setup Cost', value: data.totalSetupCost },
+              { label: 'Liquid Funds', value: data.liquidFunds },
               { label: 'Royalty', value: data.royaltyFee },
               { label: 'Agreement', value: data.agreementTerm },
               { label: 'Break-even', value: data.breakEven },
               { label: 'Area', value: data.minArea },
+              { label: 'Location', value: data.preferredLocation },
+              { label: 'Parking', value: data.parkingRequirement },
+              { label: 'Staff', value: data.staffRequired },
+              { label: 'Utilities', value: data.utilityRequirement },
             ].map(r => (
               <div key={r.label} className="fv-card">
                 <span className="fv-card__label">{r.label}</span>

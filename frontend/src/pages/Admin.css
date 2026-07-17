@@ -1008,6 +1008,63 @@
   border-top: 1px solid var(--adm-border);
 }
 
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+/* Image Uploader Field */
+.image-uploader-field {
+  background: var(--adm-card-sub);
+  border: 1px dashed var(--adm-border);
+  padding: 16px;
+  border-radius: var(--adm-radius);
+}
+
+.image-uploader-preview-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.uploader-preview-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--adm-ember);
+}
+
+.uploader-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.btn-upload-file {
+  background: var(--adm-border);
+  color: var(--adm-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--adm-radius-s);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+.btn-upload-file:hover {
+  background: var(--adm-ember);
+  color: #ffffff;
+}
+
+.uploader-url-input {
+  width: 100%;
+}
+
+
 /* ══════════════════════════════════════════════════════════
    MODAL
 ══════════════════════════════════════════════════════════ */

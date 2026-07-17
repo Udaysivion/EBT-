@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import logo from '../assets/logo.jpg'
 import './Footer.css'
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Link to="/" className="footer__logo">
-              <img src="https://em-babu-thinnara.firebaseapp.com/1.png" alt="EBT Logo" />
+              <img src={logo} alt="EBT Logo" />
               <div>
                 <span className="footer__logo-title">EM BABU THINNARA</span>
                 <span className="footer__logo-tagline">A Family Restaurant</span>

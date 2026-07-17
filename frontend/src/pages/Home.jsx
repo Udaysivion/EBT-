@@ -7,6 +7,7 @@ import MenuCard from '../components/MenuCard'
 import BranchCard from '../components/BranchCard'
 import { menuCategories, branches, stats } from '../data/menuData'
 import { dataService } from '../api/dataService'
+import logo from '../assets/logo.jpg'
 import './Home.css'
 
 function StatsBar({ statsData }) {
@@ -214,7 +215,7 @@ function FranchiseCTA() {
           transition={{ duration: 0.7 }}
         >
           <img
-            src="https://em-babu-thinnara.firebaseapp.com/1.png"
+            src={logo}
             alt="EBT Logo"
             className="franchise-cta__logo"
           />

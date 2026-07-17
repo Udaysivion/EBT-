@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { dataService } from '../api/dataService'
+import logo from '../assets/logo.jpg'
 import './Contact.css'
 
 const contacts = [
@@ -418,7 +419,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <img
-              src="https://em-babu-thinnara.firebaseapp.com/1.png"
+              src={logo}
               alt="EBT Logo"
               className="contact-tagline__logo"
             />

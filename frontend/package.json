@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node run-dev.cjs",
     "build": "vite build",
     "preview": "vite preview",
     "ai-brief": "node scripts/generate-ai-project-brief.mjs",

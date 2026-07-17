@@ -68,16 +68,6 @@
   color: var(--clr-cream);
 }
 
-.navbar__logo-sub {
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: var(--clr-ember);
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
 /* Desktop Links */
 .navbar__links {
   display: flex;
