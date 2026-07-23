@@ -119,12 +119,12 @@ function FaqItem({ faq, index }) {
 /* ─── MAIN PAGE ─────────────────────────────────────────── */
 export default function Franchise() {
   const [franchiseData, setFranchiseData] = useState({
-    founderName: "Usha Mandra",
+    founderName: "Kiran Sagar Reddy",
     founderRole: "Founder & Visionary",
-    founderPhoto: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
+    founderPhoto: "/kiran_sagar_reddy.png",
     foundedYear: "2020",
     founderQuote: "Our food is our identity. Every plate we serve carries our heart and our story.",
-    founderBio: "Since 2020, Usha Mandra has been the driving force behind EM BABU THINNARA — transforming Hyderabad's food landscape with authentic home-style biryani and Arabian mandi.",
+    founderBio: "Since 2020, Kiran Sagar Reddy has been the driving force behind EM BABU THINNARA — transforming Hyderabad's food landscape with authentic home-style biryani and Arabian mandi.",
     franchiseFee: "₹ 5 Lakhs",
     totalSetupCost: "₹ 20–35 Lakhs",
     liquidFunds: "₹ 10–15 Lakhs",

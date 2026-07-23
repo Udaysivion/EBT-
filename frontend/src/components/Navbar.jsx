@@ -18,7 +18,7 @@ export default function Navbar() {
   const location = useLocation()
 
   const isHome = location.pathname === '/'
-  const showSolid = !isHome || scrolled
+  const showSolid = !isHome || scrolled || menuOpen
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30)
@@ -32,7 +32,7 @@ export default function Navbar() {
   }, [menuOpen])
 
   return (
-    <header className={`navbar ${showSolid ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${showSolid ? 'navbar--scrolled' : ''} ${menuOpen ? 'navbar--open' : ''}`}>
       <div className="navbar__inner">
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
