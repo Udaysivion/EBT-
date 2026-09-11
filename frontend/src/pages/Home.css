@@ -221,13 +221,15 @@
 }
 
 .franchise-cta__logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid var(--clr-ember);
+  width: 88px;
+  height: 120px;
+  border-radius: 36px 36px 14px 14px;
+  border: 2.5px solid var(--clr-ember);
   margin-bottom: 24px;
-  object-fit: cover;
-  box-shadow: 0 0 40px rgba(232,93,4,0.3);
+  object-fit: contain;
+  background: #faf6ee;
+  padding: 4px;
+  box-shadow: 0 0 40px rgba(232, 93, 4, 0.3);
 }
 
 .franchise-cta__title {

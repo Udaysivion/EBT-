@@ -97,12 +97,14 @@
 }
 
 .login-card__logo img {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 3px solid var(--adm-ember);
-  box-shadow: 0 0 32px rgba(224,90,26,0.4);
-  object-fit: cover;
+  width: 76px;
+  height: 104px;
+  border-radius: 32px 32px 12px 12px;
+  border: 2px solid var(--adm-ember);
+  box-shadow: 0 0 32px rgba(224, 90, 26, 0.4);
+  object-fit: contain;
+  background: #faf6ee;
+  padding: 3px;
 }
 
 .login-card__brand {
@@ -280,12 +282,14 @@
 }
 
 .sidebar__logo {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--adm-ember);
-  object-fit: cover;
+  width: 36px;
+  height: 48px;
+  border-radius: 16px 16px 6px 6px;
+  border: 1.5px solid var(--adm-ember);
+  object-fit: contain;
+  background: #faf6ee;
   flex-shrink: 0;
+  padding: 1.5px;
 }
 
 .sidebar__brand {

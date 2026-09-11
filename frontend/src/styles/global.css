@@ -98,6 +98,65 @@ button {
   min-height: 100vh;
 }
 
+/* Page Hero (shared across inner pages: Branches, Contact, etc.) */
+.page-hero {
+  position: relative;
+  height: 380px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 10, 6, 0.92) 0%,
+    rgba(17, 10, 6, 0.55) 50%,
+    rgba(17, 10, 6, 0.25) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.page-hero__subtitle {
+  font-size: 1.05rem;
+  color: rgba(240, 230, 211, 0.85);
+  max-width: 540px;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+  }
+  .page-hero__content {
+    padding-bottom: 36px;
+  }
+}
+
 /* Section spacing */
 .section {
   padding: 100px 0;

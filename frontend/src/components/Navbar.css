@@ -43,12 +43,16 @@
 }
 
 .navbar__logo-img {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid var(--clr-ember);
-  object-fit: cover;
+  width: auto;
+  height: 48px;
+  max-width: 44px;
+  border-radius: 18px 18px 7px 7px;
+  border: 1.5px solid var(--clr-ember);
+  object-fit: contain;
+  background: #faf6ee;
+  box-shadow: 0 2px 10px rgba(200, 65, 11, 0.25);
   transition: var(--transition);
+  padding: 1.5px;
 }
 
 .navbar__logo:hover .navbar__logo-img {
